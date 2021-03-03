@@ -6,6 +6,8 @@ metadata:
     policy.open-cluster-management.io/standards: NIST SP 800-53
     policy.open-cluster-management.io/categories: AC Access Control
     policy.open-cluster-management.io/controls: AC-3 Access Enforcement
+    integrityshield.io/message: H4sIAAAAAAAAA5VVzW/aMBS/5694orepZp2qSRM3xqqph1VV2+0y9fDiPIhHYke2w8qm/e97cWIIECj1BRy/r9/vfWGlfpB1yugJVKZQcj02FWkhi9p5sqJEjQsqSfuxMu9XH5Kl0tkE7oNoUpLHDD1OEgCNJUUbwpqCUpZUesFPqLXx6NmJayThDE/Oo87QZm4Cd7ePT/B4D5+ursTH6zP1JXpaGKuIDUxnMJWSnIOZ0Z5DO9dGKx0siOto40bPjZVBKHEVyQaR5WumAsKp9IFM1YiV/JYph2lBTNocC0dJ9Cw8lVXBYXacCDDpL5L+C82VVsFI+N4cfGuWomKbLYY9V4vahgC71EWJfgrjOZZKQS/IMdNGNOKP5ygPcAE+p33kQX98oATKgVmRtSrLSEO6bnUtSWqigAotB8i4YYVFTcAOjlga92JzxCaVX08gV4t8D62rUNIjFcy/sX1EAPTCLGfMx8/Rsk5JvBs977wrvXnPaI514XcE2qTuJzseAdLwg0It6WldsZWSM5rjinbE4ERt7Kb6gbP1uc0Wc97kDrrkBcuMRjl/oNuvL5uiHGPtc+6eP4HL8fKT26ureIaqp8/rBFyomL2BsHtcHcC5ISOiw/XdkR14jl4wK5VmwHd8a8pHouPqIu2YrAMuN5i/WlNXJxAf6DUoHmg+FOiWfrjwOYcQ6E6p/cQVOmt7tbkeJYubmpuUhZt2iTZK9DIPLdAIgZmH/wNmYW1q+K0cC5uQdf4dcHUOcCFE8uah062GAtvp2JXhwJKI42RgWVRRu6O5G0Xx65BK5H7j+KEOFG9xYlW5E7En/QIUpxbZxtV2hm69vMrRAauvxDXAaYA2sHVP8ROHdOeDl0GmertYAO9aX/OWGz3ZmkZdxfgwjb6FeLLZnup0hapottrW7O7wDDV788Iz27mtq8bZ3yXxCCa9UtboJuTLTdVP4FZftjPdteN0NXr+l/wHaGYFjqMIAAA=
+    integrityshield.io/signature: LS0tLS1CRUdJTiBQR1AgU0lHTkFUVVJFLS0tLS0KCmlRSEtCQUFCQ2dBMEZpRUVDOFZXV2MvQlNhOXE3cENPcCtvcnBLeFFhdndGQW1BL1NIY1dISE5wWjI1bGNrQmwKYm5SbGNuQnlhWE5sTG1OdmJRQUtDUkNuNml1a3JGQnEvTm0xQy85TXBNYStJRlFDanlXWlE1eXMzKzFWU2RURApBVmhWYnNFeGZmcGhRR1NiNGkwOXlUMmpEUzIvdGNET3ArZlJheE1zUGhrRUdBWnBQMTRyNm05WGYyQ2RoNEZ0CjNTVDM5VkxhTW5UdXlSaGhzNFRvZVloWDFJWHRGTUw5WFRZcVhmbW9HN1JOZml0U0RMeDJKdytQSG9VLzdBRG0KZm1MYTVHWnNjZEw0akRsL0t2QUVieFJDK0xYSmVaUy9pQlNFTUk3R2xqK05Ra0RIY1AyT2l3cnkzMThBN0twKwpPdXNHMXBOay9LQUdpU1ZpRDMveG5kaWg2bU1rUkxJVEhnUmRQN0ZGRG5IMk4zS0o4bDhKTUJHWVVtYVpZT0cwCjJBUlJiN2QvMVpDMG9jaXNNaTZyQnp2RGNJTlFiZ3Q1RHlMaVlJV0tnQlY4ck1YTHhSdkpNWE0yOE56VXBNcC8KWEU4YVJBdnhxMENlejRxOU5KNlFBTHhrWFdOc3VGMWplREMwUFk1dmdSWEdIdUNEcm1vQmZSSm1oc0tPeTF0WAppUlBZT1V6TmFrSHpuN0tKZjhTZWZDQjNNTTR0NXFEcFFGZGFjT0hYOEMwdnEyYTNHK1NpSS81allrWDN3YnphCjQvVm1MN0RocWRqUDRES0xhY3dUMGhKT214bG00d2NmdHVSaEJLOD0KPVJCZkoKLS0tLS1FTkQgUEdQIFNJR05BVFVSRS0tLS0tCg==
 spec:
   remediationAction: inform
   disabled: false
@@ -29,9 +31,9 @@ spec:
                 metadata:
                   name: sample-rolebinding
                 subjects:
-                - kind: User
-                  name: admin # Name is case sensitive
-                  apiGroup: rbac.authorization.k8s.io
+                  - kind: User
+                    name: admin # Name is case sensitive
+                    apiGroup: rbac.authorization.k8s.io
                 roleRef:
                   kind: Role #this must be Role or ClusterRole
                   name: operator # this must match the name of the Role or ClusterRole you wish to bind to
@@ -41,23 +43,29 @@ apiVersion: policy.open-cluster-management.io/v1
 kind: PlacementBinding
 metadata:
   name: binding-policy-rolebinding
+  annotations:
+    integrityshield.io/message: H4sIAAAAAAAAA5VVzW/aMBS/5694orepZp2qSRM3xqqph1VV2+0y9fDiPIhHYke2w8qm/e97cWIIECj1BRy/r9/vfWGlfpB1yugJVKZQcj02FWkhi9p5sqJEjQsqSfuxMu9XH5Kl0tkE7oNoUpLHDD1OEgCNJUUbwpqCUpZUesFPqLXx6NmJayThDE/Oo87QZm4Cd7ePT/B4D5+ursTH6zP1JXpaGKuIDUxnMJWSnIOZ0Z5DO9dGKx0siOto40bPjZVBKHEVyQaR5WumAsKp9IFM1YiV/JYph2lBTNocC0dJ9Cw8lVXBYXacCDDpL5L+C82VVsFI+N4cfGuWomKbLYY9V4vahgC71EWJfgrjOZZKQS/IMdNGNOKP5ygPcAE+p33kQX98oATKgVmRtSrLSEO6bnUtSWqigAotB8i4YYVFTcAOjlga92JzxCaVX08gV4t8D62rUNIjFcy/sX1EAPTCLGfMx8/Rsk5JvBs977wrvXnPaI514XcE2qTuJzseAdLwg0It6WldsZWSM5rjinbE4ERt7Kb6gbP1uc0Wc97kDrrkBcuMRjl/oNuvL5uiHGPtc+6eP4HL8fKT26ureIaqp8/rBFyomL2BsHtcHcC5ISOiw/XdkR14jl4wK5VmwHd8a8pHouPqIu2YrAMuN5i/WlNXJxAf6DUoHmg+FOiWfrjwOYcQ6E6p/cQVOmt7tbkeJYubmpuUhZt2iTZK9DIPLdAIgZmH/wNmYW1q+K0cC5uQdf4dcHUOcCFE8uah062GAtvp2JXhwJKI42RgWVRRu6O5G0Xx65BK5H7j+KEOFG9xYlW5E7En/QIUpxbZxtV2hm69vMrRAauvxDXAaYA2sHVP8ROHdOeDl0GmertYAO9aX/OWGz3ZmkZdxfgwjb6FeLLZnup0hapottrW7O7wDDV788Iz27mtq8bZ3yXxCCa9UtboJuTLTdVP4FZftjPdteN0NXr+l/wHaGYFjqMIAAA=
+    integrityshield.io/signature: LS0tLS1CRUdJTiBQR1AgU0lHTkFUVVJFLS0tLS0KCmlRSEtCQUFCQ2dBMEZpRUVDOFZXV2MvQlNhOXE3cENPcCtvcnBLeFFhdndGQW1BL1NIY1dISE5wWjI1bGNrQmwKYm5SbGNuQnlhWE5sTG1OdmJRQUtDUkNuNml1a3JGQnEvTm0xQy85TXBNYStJRlFDanlXWlE1eXMzKzFWU2RURApBVmhWYnNFeGZmcGhRR1NiNGkwOXlUMmpEUzIvdGNET3ArZlJheE1zUGhrRUdBWnBQMTRyNm05WGYyQ2RoNEZ0CjNTVDM5VkxhTW5UdXlSaGhzNFRvZVloWDFJWHRGTUw5WFRZcVhmbW9HN1JOZml0U0RMeDJKdytQSG9VLzdBRG0KZm1MYTVHWnNjZEw0akRsL0t2QUVieFJDK0xYSmVaUy9pQlNFTUk3R2xqK05Ra0RIY1AyT2l3cnkzMThBN0twKwpPdXNHMXBOay9LQUdpU1ZpRDMveG5kaWg2bU1rUkxJVEhnUmRQN0ZGRG5IMk4zS0o4bDhKTUJHWVVtYVpZT0cwCjJBUlJiN2QvMVpDMG9jaXNNaTZyQnp2RGNJTlFiZ3Q1RHlMaVlJV0tnQlY4ck1YTHhSdkpNWE0yOE56VXBNcC8KWEU4YVJBdnhxMENlejRxOU5KNlFBTHhrWFdOc3VGMWplREMwUFk1dmdSWEdIdUNEcm1vQmZSSm1oc0tPeTF0WAppUlBZT1V6TmFrSHpuN0tKZjhTZWZDQjNNTTR0NXFEcFFGZGFjT0hYOEMwdnEyYTNHK1NpSS81allrWDN3YnphCjQvVm1MN0RocWRqUDRES0xhY3dUMGhKT214bG00d2NmdHVSaEJLOD0KPVJCZkoKLS0tLS1FTkQgUEdQIFNJR05BVFVSRS0tLS0tCg==
 placementRef:
   name: placement-policy-rolebinding
   kind: PlacementRule
   apiGroup: apps.open-cluster-management.io
 subjects:
-- name: policy-rolebinding
-  kind: Policy
-  apiGroup: policy.open-cluster-management.io
+  - name: policy-rolebinding
+    kind: Policy
+    apiGroup: policy.open-cluster-management.io
 ---
 apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
   name: placement-policy-rolebinding
+  annotations:
+    integrityshield.io/message: H4sIAAAAAAAAA5VVzW/aMBS/5694orepZp2qSRM3xqqph1VV2+0y9fDiPIhHYke2w8qm/e97cWIIECj1BRy/r9/vfWGlfpB1yugJVKZQcj02FWkhi9p5sqJEjQsqSfuxMu9XH5Kl0tkE7oNoUpLHDD1OEgCNJUUbwpqCUpZUesFPqLXx6NmJayThDE/Oo87QZm4Cd7ePT/B4D5+ursTH6zP1JXpaGKuIDUxnMJWSnIOZ0Z5DO9dGKx0siOto40bPjZVBKHEVyQaR5WumAsKp9IFM1YiV/JYph2lBTNocC0dJ9Cw8lVXBYXacCDDpL5L+C82VVsFI+N4cfGuWomKbLYY9V4vahgC71EWJfgrjOZZKQS/IMdNGNOKP5ygPcAE+p33kQX98oATKgVmRtSrLSEO6bnUtSWqigAotB8i4YYVFTcAOjlga92JzxCaVX08gV4t8D62rUNIjFcy/sX1EAPTCLGfMx8/Rsk5JvBs977wrvXnPaI514XcE2qTuJzseAdLwg0It6WldsZWSM5rjinbE4ERt7Kb6gbP1uc0Wc97kDrrkBcuMRjl/oNuvL5uiHGPtc+6eP4HL8fKT26ureIaqp8/rBFyomL2BsHtcHcC5ISOiw/XdkR14jl4wK5VmwHd8a8pHouPqIu2YrAMuN5i/WlNXJxAf6DUoHmg+FOiWfrjwOYcQ6E6p/cQVOmt7tbkeJYubmpuUhZt2iTZK9DIPLdAIgZmH/wNmYW1q+K0cC5uQdf4dcHUOcCFE8uah062GAtvp2JXhwJKI42RgWVRRu6O5G0Xx65BK5H7j+KEOFG9xYlW5E7En/QIUpxbZxtV2hm69vMrRAauvxDXAaYA2sHVP8ROHdOeDl0GmertYAO9aX/OWGz3ZmkZdxfgwjb6FeLLZnup0hapottrW7O7wDDV788Iz27mtq8bZ3yXxCCa9UtboJuTLTdVP4FZftjPdteN0NXr+l/wHaGYFjqMIAAA=
+    integrityshield.io/signature: LS0tLS1CRUdJTiBQR1AgU0lHTkFUVVJFLS0tLS0KCmlRSEtCQUFCQ2dBMEZpRUVDOFZXV2MvQlNhOXE3cENPcCtvcnBLeFFhdndGQW1BL1NIY1dISE5wWjI1bGNrQmwKYm5SbGNuQnlhWE5sTG1OdmJRQUtDUkNuNml1a3JGQnEvTm0xQy85TXBNYStJRlFDanlXWlE1eXMzKzFWU2RURApBVmhWYnNFeGZmcGhRR1NiNGkwOXlUMmpEUzIvdGNET3ArZlJheE1zUGhrRUdBWnBQMTRyNm05WGYyQ2RoNEZ0CjNTVDM5VkxhTW5UdXlSaGhzNFRvZVloWDFJWHRGTUw5WFRZcVhmbW9HN1JOZml0U0RMeDJKdytQSG9VLzdBRG0KZm1MYTVHWnNjZEw0akRsL0t2QUVieFJDK0xYSmVaUy9pQlNFTUk3R2xqK05Ra0RIY1AyT2l3cnkzMThBN0twKwpPdXNHMXBOay9LQUdpU1ZpRDMveG5kaWg2bU1rUkxJVEhnUmRQN0ZGRG5IMk4zS0o4bDhKTUJHWVVtYVpZT0cwCjJBUlJiN2QvMVpDMG9jaXNNaTZyQnp2RGNJTlFiZ3Q1RHlMaVlJV0tnQlY4ck1YTHhSdkpNWE0yOE56VXBNcC8KWEU4YVJBdnhxMENlejRxOU5KNlFBTHhrWFdOc3VGMWplREMwUFk1dmdSWEdIdUNEcm1vQmZSSm1oc0tPeTF0WAppUlBZT1V6TmFrSHpuN0tKZjhTZWZDQjNNTTR0NXFEcFFGZGFjT0hYOEMwdnEyYTNHK1NpSS81allrWDN3YnphCjQvVm1MN0RocWRqUDRES0xhY3dUMGhKT214bG00d2NmdHVSaEJLOD0KPVJCZkoKLS0tLS1FTkQgUEdQIFNJR05BVFVSRS0tLS0tCg==
 spec:
   clusterConditions:
-  - status: "True"
-    type: ManagedClusterConditionAvailable
+    - status: "True"
+      type: ManagedClusterConditionAvailable
   clusterSelector:
     matchExpressions:
       - {key: environment, operator: In, values: ["dev"]}

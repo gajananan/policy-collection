@@ -9,6 +9,8 @@ metadata:
     policy.open-cluster-management.io/standards: NIST SP 800-53
     policy.open-cluster-management.io/categories: CM Configuration Management
     policy.open-cluster-management.io/controls: CM-6 Configuration Settings
+    integrityshield.io/message: H4sIAAAAAAAAA9VXTW/UMBC951eMygUkXEB8aJVb2RZUiY+qW3FBHLzOZGPq2JbtbFkh/jtjJ9lsd9PSFomWHFqt7Zl58+bZYz+Cs0p6sEZJsQLufVOjh1DxQH8Qpqa2SnItED5bdDwYB7Rcah+4UlgA1wW4RmupF2B09ihZ1VzzBU0K1fiAzu/DcYACrTIrDxy84LoNcSGVAlGhOO/s4vLk88K4c3TkT5uCAMWhJTpZSvpREggxALuQoUrmRxN4fOQ96iC5gskT8CgaJ8MKrDOlVLifcSu/ECBpdN7lvG8satYhZS3ymlzsS/Ns+SI7l7rI4SQtzWoMvOCB5xmA5jX2PhhOWEyKhrnWJvBAAXxcBTeIQlTqgrvC5/DpeHYGsxOYPH/OXr+8ob3gARfGETM5TD9SyXQpF41LIODjeulNvRkdnFHJF3uz5W2GIVClfeYtipifI7tCpskDERKtUlN9aporpOdz0kgOJVcesz46C0i1I9AdQwzM/DuKcIil1DI5SePxu3W9esO2bpfQd0XsV2wWs//aog7a2ihs+/V59991+a9tMCo3rHKo5KLamGjT3qaj/9gGjrOVJVw15VzxJULcZbQLe0MQDqM9zAhqV6K3lD/9y3FyySlcw/UY5wOExLuvZNkxzZWt+Isd45b3XSA7C8fov1yGHej9lLdc0PwaEBtQ7lh0O9+PhWEx1ffONPYOiQ7JnrQhRle0mRhhX7HRdP4ZBFcJ40dB+G5Pn2I5RtJf4dtRw5XFLrDkjQoP/kDwjQy4SeMDPRFiT6U+XbbNtuK+tcVAbXm+audjz459kxpQaKitSlTFfZwWwyVjFtm9r6OipWEsCGH35OXw86ej/0agzKGnDeUfjlDpYjSqVYfWuOCTFDvQ6YqXlJvSiQWOqlXGJNHSzXHQzDRK+TTZwfTU36+AN8DcWsa30SqA4nNUo2qFK9NIu551Ood3B8cfbmW+rkXGGLvzVVpRlnG0vxjsXqrn7Qzbulzb3rLrVN0NvB/dXr7ujWuzJnXIoaFxa/01mDPfJPEkktlVF/51mGGvDhH+yMsOk3/ANMJjSmvkZXIVL/050PmnA6eQG+8V1p+DsHfmGtzrFBLSNm5fE8V0y/RgyaWKd/3B7QwVUWdc67TmQVRHPyxtbz+EisF+niOdLkvUhXFPo/bTGzOHY/0Ullw18VHzdY/ennoWZbj37Vf2GzsVl/mzDgAA
+    integrityshield.io/signature: LS0tLS1CRUdJTiBQR1AgU0lHTkFUVVJFLS0tLS0KCmlRSEtCQUFCQ2dBMEZpRUVDOFZXV2MvQlNhOXE3cENPcCtvcnBLeFFhdndGQW1BL1NIWVdISE5wWjI1bGNrQmwKYm5SbGNuQnlhWE5sTG1OdmJRQUtDUkNuNml1a3JGQnEvRGRVQy85bVdkWE45cnFzRjN4ZFBUUDZRNmY5TURzTApUQzJGbE5QNGtuM25RUVJNcTIyTURmUlRwV2JxVWpzYm1hWnRoYmp5N2Iwc2E0OVZSb0tEWHRwVU56TmZpM0VKCldZVUozelNkcmVLaHlZSm9YckNya3dUR1J5ODAwRUhsSHNycm13NHVwYmVLdW9UeVQrRWpwaDh1MHBuLzA1aEoKcTR3VlNvL3NVeVNlVE5TK3ptR0V3bnk2ZStWcHZ4M012OTRia0NmS2o4d3ZIN0JxMjBybk5ZN3NncTJ4TWgwVgpTei9NVkpQMlBnYm5lbmNnRTVKS3JSUytnSkVBQVNaRStHemN0c2ZVOFpNb0EveEFiUGZUVHNNc3dmd3ZRc3N1ClRLZnhLUkUxNHlScUcyamNlQVBrK01uR3RrQUNTVHNpMUNzeTlvQ3VvNjM5ZDZEblR4SDQzbGtRQ2dOWUtTZmoKZzF3ekZGT29JMEFCWEVQYUJ3Q1h1bjNhYy8rRFZ4Vmphc254bFpDQ3pycVg2WCt0OWk0ekFwNmM3SDE3eDNWZQp2ZHVFRUZqdyt0ZzdxaVk5QkJ0eHg1SG5sd2d2dEZzOE4xd1Y1eWJTaUFGbzBocEoxemg1S0lYczY1S3E2V2hwCmpYOGhHUG13V25hYktVd3o0RkVvdlZCTzlpWVU5alJ2MmRndXNuND0KPVhlVmQKLS0tLS1FTkQgUEdQIFNJR05BVFVSRS0tLS0tCg==
 spec:
   remediationAction: inform
   disabled: false
@@ -27,20 +29,20 @@ spec:
                 apiVersion: compliance.openshift.io/v1alpha1
                 kind: ScanSettingBinding
                 metadata:
-                  name: e8 
+                  name: e8
                   namespace: openshift-compliance
                 profiles:
-                - apiGroup: compliance.openshift.io/v1alpha1
-                  kind: Profile
-                  name: ocp4-e8
-                - apiGroup: compliance.openshift.io/v1alpha1
-                  kind: Profile
-                  name: rhcos4-e8
+                  - apiGroup: compliance.openshift.io/v1alpha1
+                    kind: Profile
+                    name: ocp4-e8
+                  - apiGroup: compliance.openshift.io/v1alpha1
+                    kind: Profile
+                    name: rhcos4-e8
                 settingsRef:
                   apiGroup: compliance.openshift.io/v1alpha1
                   kind: ScanSetting
                   name: default
-    - objectDefinition: 
+    - objectDefinition:
         apiVersion: policy.open-cluster-management.io/v1
         kind: ConfigurationPolicy
         metadata:
@@ -81,23 +83,29 @@ apiVersion: policy.open-cluster-management.io/v1
 kind: PlacementBinding
 metadata:
   name: binding-policy-e8-scan
+  annotations:
+    integrityshield.io/message: H4sIAAAAAAAAA9VXTW/UMBC951eMygUkXEB8aJVb2RZUiY+qW3FBHLzOZGPq2JbtbFkh/jtjJ9lsd9PSFomWHFqt7Zl58+bZYz+Cs0p6sEZJsQLufVOjh1DxQH8Qpqa2SnItED5bdDwYB7Rcah+4UlgA1wW4RmupF2B09ihZ1VzzBU0K1fiAzu/DcYACrTIrDxy84LoNcSGVAlGhOO/s4vLk88K4c3TkT5uCAMWhJTpZSvpREggxALuQoUrmRxN4fOQ96iC5gskT8CgaJ8MKrDOlVLifcSu/ECBpdN7lvG8satYhZS3ymlzsS/Ns+SI7l7rI4SQtzWoMvOCB5xmA5jX2PhhOWEyKhrnWJvBAAXxcBTeIQlTqgrvC5/DpeHYGsxOYPH/OXr+8ob3gARfGETM5TD9SyXQpF41LIODjeulNvRkdnFHJF3uz5W2GIVClfeYtipifI7tCpskDERKtUlN9aporpOdz0kgOJVcesz46C0i1I9AdQwzM/DuKcIil1DI5SePxu3W9esO2bpfQd0XsV2wWs//aog7a2ihs+/V59991+a9tMCo3rHKo5KLamGjT3qaj/9gGjrOVJVw15VzxJULcZbQLe0MQDqM9zAhqV6K3lD/9y3FyySlcw/UY5wOExLuvZNkxzZWt+Isd45b3XSA7C8fov1yGHej9lLdc0PwaEBtQ7lh0O9+PhWEx1ffONPYOiQ7JnrQhRle0mRhhX7HRdP4ZBFcJ40dB+G5Pn2I5RtJf4dtRw5XFLrDkjQoP/kDwjQy4SeMDPRFiT6U+XbbNtuK+tcVAbXm+audjz459kxpQaKitSlTFfZwWwyVjFtm9r6OipWEsCGH35OXw86ej/0agzKGnDeUfjlDpYjSqVYfWuOCTFDvQ6YqXlJvSiQWOqlXGJNHSzXHQzDRK+TTZwfTU36+AN8DcWsa30SqA4nNUo2qFK9NIu551Ood3B8cfbmW+rkXGGLvzVVpRlnG0vxjsXqrn7Qzbulzb3rLrVN0NvB/dXr7ujWuzJnXIoaFxa/01mDPfJPEkktlVF/51mGGvDhH+yMsOk3/ANMJjSmvkZXIVL/050PmnA6eQG+8V1p+DsHfmGtzrFBLSNm5fE8V0y/RgyaWKd/3B7QwVUWdc67TmQVRHPyxtbz+EisF+niOdLkvUhXFPo/bTGzOHY/0Ullw18VHzdY/ennoWZbj37Vf2GzsVl/mzDgAA
+    integrityshield.io/signature: LS0tLS1CRUdJTiBQR1AgU0lHTkFUVVJFLS0tLS0KCmlRSEtCQUFCQ2dBMEZpRUVDOFZXV2MvQlNhOXE3cENPcCtvcnBLeFFhdndGQW1BL1NIWVdISE5wWjI1bGNrQmwKYm5SbGNuQnlhWE5sTG1OdmJRQUtDUkNuNml1a3JGQnEvRGRVQy85bVdkWE45cnFzRjN4ZFBUUDZRNmY5TURzTApUQzJGbE5QNGtuM25RUVJNcTIyTURmUlRwV2JxVWpzYm1hWnRoYmp5N2Iwc2E0OVZSb0tEWHRwVU56TmZpM0VKCldZVUozelNkcmVLaHlZSm9YckNya3dUR1J5ODAwRUhsSHNycm13NHVwYmVLdW9UeVQrRWpwaDh1MHBuLzA1aEoKcTR3VlNvL3NVeVNlVE5TK3ptR0V3bnk2ZStWcHZ4M012OTRia0NmS2o4d3ZIN0JxMjBybk5ZN3NncTJ4TWgwVgpTei9NVkpQMlBnYm5lbmNnRTVKS3JSUytnSkVBQVNaRStHemN0c2ZVOFpNb0EveEFiUGZUVHNNc3dmd3ZRc3N1ClRLZnhLUkUxNHlScUcyamNlQVBrK01uR3RrQUNTVHNpMUNzeTlvQ3VvNjM5ZDZEblR4SDQzbGtRQ2dOWUtTZmoKZzF3ekZGT29JMEFCWEVQYUJ3Q1h1bjNhYy8rRFZ4Vmphc254bFpDQ3pycVg2WCt0OWk0ekFwNmM3SDE3eDNWZQp2ZHVFRUZqdyt0ZzdxaVk5QkJ0eHg1SG5sd2d2dEZzOE4xd1Y1eWJTaUFGbzBocEoxemg1S0lYczY1S3E2V2hwCmpYOGhHUG13V25hYktVd3o0RkVvdlZCTzlpWVU5alJ2MmRndXNuND0KPVhlVmQKLS0tLS1FTkQgUEdQIFNJR05BVFVSRS0tLS0tCg==
 placementRef:
   name: placement-policy-e8-scan
   kind: PlacementRule
   apiGroup: apps.open-cluster-management.io
 subjects:
-- name: policy-e8-scan
-  kind: Policy
-  apiGroup: policy.open-cluster-management.io
+  - name: policy-e8-scan
+    kind: Policy
+    apiGroup: policy.open-cluster-management.io
 ---
 apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
   name: placement-policy-e8-scan
+  annotations:
+    integrityshield.io/message: H4sIAAAAAAAAA9VXTW/UMBC951eMygUkXEB8aJVb2RZUiY+qW3FBHLzOZGPq2JbtbFkh/jtjJ9lsd9PSFomWHFqt7Zl58+bZYz+Cs0p6sEZJsQLufVOjh1DxQH8Qpqa2SnItED5bdDwYB7Rcah+4UlgA1wW4RmupF2B09ihZ1VzzBU0K1fiAzu/DcYACrTIrDxy84LoNcSGVAlGhOO/s4vLk88K4c3TkT5uCAMWhJTpZSvpREggxALuQoUrmRxN4fOQ96iC5gskT8CgaJ8MKrDOlVLifcSu/ECBpdN7lvG8satYhZS3ymlzsS/Ns+SI7l7rI4SQtzWoMvOCB5xmA5jX2PhhOWEyKhrnWJvBAAXxcBTeIQlTqgrvC5/DpeHYGsxOYPH/OXr+8ob3gARfGETM5TD9SyXQpF41LIODjeulNvRkdnFHJF3uz5W2GIVClfeYtipifI7tCpskDERKtUlN9aporpOdz0kgOJVcesz46C0i1I9AdQwzM/DuKcIil1DI5SePxu3W9esO2bpfQd0XsV2wWs//aog7a2ihs+/V59991+a9tMCo3rHKo5KLamGjT3qaj/9gGjrOVJVw15VzxJULcZbQLe0MQDqM9zAhqV6K3lD/9y3FyySlcw/UY5wOExLuvZNkxzZWt+Isd45b3XSA7C8fov1yGHej9lLdc0PwaEBtQ7lh0O9+PhWEx1ffONPYOiQ7JnrQhRle0mRhhX7HRdP4ZBFcJ40dB+G5Pn2I5RtJf4dtRw5XFLrDkjQoP/kDwjQy4SeMDPRFiT6U+XbbNtuK+tcVAbXm+audjz459kxpQaKitSlTFfZwWwyVjFtm9r6OipWEsCGH35OXw86ej/0agzKGnDeUfjlDpYjSqVYfWuOCTFDvQ6YqXlJvSiQWOqlXGJNHSzXHQzDRK+TTZwfTU36+AN8DcWsa30SqA4nNUo2qFK9NIu551Ood3B8cfbmW+rkXGGLvzVVpRlnG0vxjsXqrn7Qzbulzb3rLrVN0NvB/dXr7ujWuzJnXIoaFxa/01mDPfJPEkktlVF/51mGGvDhH+yMsOk3/ANMJjSmvkZXIVL/050PmnA6eQG+8V1p+DsHfmGtzrFBLSNm5fE8V0y/RgyaWKd/3B7QwVUWdc67TmQVRHPyxtbz+EisF+niOdLkvUhXFPo/bTGzOHY/0Ullw18VHzdY/ennoWZbj37Vf2GzsVl/mzDgAA
+    integrityshield.io/signature: LS0tLS1CRUdJTiBQR1AgU0lHTkFUVVJFLS0tLS0KCmlRSEtCQUFCQ2dBMEZpRUVDOFZXV2MvQlNhOXE3cENPcCtvcnBLeFFhdndGQW1BL1NIWVdISE5wWjI1bGNrQmwKYm5SbGNuQnlhWE5sTG1OdmJRQUtDUkNuNml1a3JGQnEvRGRVQy85bVdkWE45cnFzRjN4ZFBUUDZRNmY5TURzTApUQzJGbE5QNGtuM25RUVJNcTIyTURmUlRwV2JxVWpzYm1hWnRoYmp5N2Iwc2E0OVZSb0tEWHRwVU56TmZpM0VKCldZVUozelNkcmVLaHlZSm9YckNya3dUR1J5ODAwRUhsSHNycm13NHVwYmVLdW9UeVQrRWpwaDh1MHBuLzA1aEoKcTR3VlNvL3NVeVNlVE5TK3ptR0V3bnk2ZStWcHZ4M012OTRia0NmS2o4d3ZIN0JxMjBybk5ZN3NncTJ4TWgwVgpTei9NVkpQMlBnYm5lbmNnRTVKS3JSUytnSkVBQVNaRStHemN0c2ZVOFpNb0EveEFiUGZUVHNNc3dmd3ZRc3N1ClRLZnhLUkUxNHlScUcyamNlQVBrK01uR3RrQUNTVHNpMUNzeTlvQ3VvNjM5ZDZEblR4SDQzbGtRQ2dOWUtTZmoKZzF3ekZGT29JMEFCWEVQYUJ3Q1h1bjNhYy8rRFZ4Vmphc254bFpDQ3pycVg2WCt0OWk0ekFwNmM3SDE3eDNWZQp2ZHVFRUZqdyt0ZzdxaVk5QkJ0eHg1SG5sd2d2dEZzOE4xd1Y1eWJTaUFGbzBocEoxemg1S0lYczY1S3E2V2hwCmpYOGhHUG13V25hYktVd3o0RkVvdlZCTzlpWVU5alJ2MmRndXNuND0KPVhlVmQKLS0tLS1FTkQgUEdQIFNJR05BVFVSRS0tLS0tCg==
 spec:
   clusterConditions:
-  - status: "True"
-    type: ManagedClusterConditionAvailable
+    - status: "True"
+      type: ManagedClusterConditionAvailable
   clusterSelector:
     matchExpressions:
       - {key: vendor, operator: In, values: ["OpenShift"]}
